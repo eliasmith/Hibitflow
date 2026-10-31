@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitFlow - Build Better Habits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">HabitFlow<span>.</span></div>
+            <div class="profile">HF</div>
+        </header>
+
+        <main>
+            <section class="welcome">
+                <p class="small-heading">YOUR DAILY JOURNEY</p>
+                <h1>Build Your<br><span>Better Self.</span></h1>
+                <p class="subtitle">
+                    Small steps every day lead to big changes.
+                </p>
+            </section>
+
+            <section class="progress-card">
+                <div class="card-heading">
+                    <div>
+                        <p class="label">DAILY PROGRESS</p>
+                        <h2 id="progressPercent">0%</h2>
+                    </div>
+                    <div class="streak">
+                        <span>🔥</span>
+                        <strong id="streakCount">0</strong>
+                        <small>Day streak</small>
+                    </div>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="progressText">0 of 0 habits completed</p>
+            </section>
+
+            <section class="habits-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="label">YOUR ROUTINE</p>
+                        <h2>Today's Habits</h2>
+                    </div>
+                    <span class="habit-count" id="habitCount">0 habits</span>
+                </div>
+
+                <div id="habitList"></div>
+            </section>
+
+            <section class="add-section">
+                <p class="label">MAKE A CHANGE</p>
+                <h2>Add a New Habit</h2>
+
+                <form id="habitForm">
+                    <input
+                        type="text"
+                        id="habitName"
+                        placeholder="What do you want to achieve?"
+                        maxlength="60"
+                        required
+                    >
+
+                    <select id="habitCategory">
+                        <option value="Personal">Personal</option>
+                        <option value="Health">Health</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Productivity">Productivity</option>
+                    </select>
+
+                    <button type="submit">+ Add Habit</button>
+                </form>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>HABITFLOW © 2026</p>
+            <p>Become better, one day at a time.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

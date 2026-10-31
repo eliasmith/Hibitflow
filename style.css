@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #10151D;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 35px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #B9F36A;
+}
+
+.profile {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #242D39;
+    color: #B9F36A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.welcome {
+    margin: 25px 0 35px;
+}
+
+.small-heading,
+.label {
+    color: #B9F36A;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome h1 {
+    font-size: clamp(42px, 8vw, 65px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.welcome h1 span {
+    color: #B9F36A;
+}
+
+.subtitle {
+    color: #A5AFBD;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.progress-card {
+    background: #1B232E;
+    border: 1px solid #293442;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-heading h2 {
+    font-size: 38px;
+    margin-top: 5px;
+}
+
+.streak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.streak span {
+    font-size: 22px;
+}
+
+.streak strong {
+    font-size: 20px;
+}
+
+.streak small {
+    color: #A5AFBD;
+}
+
+.progress-track {
+    width: 100%;
+    height: 9px;
+    background: #303B49;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 22px 0 12px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #B9F36A;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    color: #A5AFBD;
+    font-size: 13px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading h2,
+.add-section h2 {
+    font-size: 23px;
+}
+
+.habit-count {
+    color: #A5AFBD;
+    font-size: 13px;
+}
+
+.habit-item {
+    background: #1B232E;
+    border: 1px solid #293442;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.habit-item.completed {
+    border-color: #B9F36A;
+    opacity: 0.7;
+}
+
+.habit-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.habit-info p {
+    color: #A5AFBD;
+    font-size: 12px;
+}
+
+.complete-button {
+    background: #293442;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-button:hover {
+    background: #B9F36A;
+    color: #10151D;
+}
+
+.habit-item.completed .complete-button {
+    background: #B9F36A;
+    color: #10151D;
+}
+
+.empty-message {
+    color: #A5AFBD;
+    text-align: center;
+    padding: 25px;
+    background: #1B232E;
+    border-radius: 12px;
+}
+
+.add-section {
+    background: #1B232E;
+    border: 1px solid #293442;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.add-section h2 {
+    margin-bottom: 20px;
+}
+
+#habitForm {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    background: #10151D;
+    border: 1px solid #354252;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #B9F36A;
+}
+
+button {
+    font-family: inherit;
+}
+
+#habitForm button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #B9F36A;
+    color: #10151D;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#habitForm button:hover {
+    background: #A6E454;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 10px 20px;
+    color: #718091;
+    font-size: 11px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 16px;
+    }
+
+    .welcome h1 {
+        font-size: 46px;
+    }
+
+    .progress-card,
+    .add-section {
+        padding: 19px;
+    }
+
+    .habit-item {
+        padding: 14px;
+    }
+
+    .complete-button {
+        padding: 9px 11px;
+    }
+}
